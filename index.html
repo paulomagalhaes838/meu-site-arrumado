@@ -12,11 +12,7 @@
   <header>
     <div class="logo">TechNow Brasil</div>
     <div class="topo-direito">
-      <a
-        href="https://wa.me/5511994545207?text=Olá,%20tudo%20bem?%20Vim%20pelo%20site,%20poderia%20me%20ajudar?"
-        class="whatsapp-btn"
-        target="_blank"
-      >
+      <a href="https://wa.me/5511994545207?text=Olá,%20tudo%20bem?%20Vim%20pelo%20site,%20poderia%20me%20ajudar?" class="whatsapp-btn" target="_blank">
         <i class="fab fa-whatsapp"></i> (11) 99454-5207
       </a>
       <button class="menu-toggle" onclick="toggleMenu()">☰</button>
@@ -33,9 +29,12 @@
 
   <!-- Seção Hero -->
   <section class="hero">
-    <h1>A nova era da tecnologia começa aqui!</h1>
-    <p>Conheça os melhores produtos e conte com nosso suporte especializado.</p>
-    <a href="#produtos" class="btn-hero">Ver Produtos</a>
+    <img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?w=1200" alt="Banner TechNow" class="hero-img" />
+    <div class="hero-texto">
+      <h1>A nova era da tecnologia começa aqui!</h1>
+      <p>Conheça os melhores produtos e conte com nosso suporte especializado.</p>
+      <a href="#produtos" class="btn-hero">Ver Produtos</a>
+    </div>
   </section>
 
   <!-- Produtos -->
@@ -46,27 +45,27 @@
         <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600" alt="Smartphone X" />
         <h3>Smartphone X</h3>
         <span class="preco">R$ 1.999,00</span>
-        <p>Desempenho de ponta e câmera incrível.</p>
+        <p>Desempenho de ponta, câmera incrível e bateria duradoura.</p>
         <button>Adicionar ao carrinho</button>
       </div>
       <div class="produto">
         <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=600" alt="Notebook Pro" />
         <h3>Notebook Pro</h3>
         <span class="preco">R$ 3.899,00</span>
-        <p>Ideal para trabalho, estudos e jogos.</p>
+        <p>Ideal para produtividade, games e uso profissional.</p>
         <button>Adicionar ao carrinho</button>
       </div>
       <div class="produto">
         <img src="https://images.unsplash.com/photo-1615391451684-56c8f9dd0b01?w=600" alt="Fone Gamer RGB" />
         <h3>Fone Gamer RGB</h3>
         <span class="preco">R$ 249,00</span>
-        <p>Áudio imersivo com luzes personalizadas.</p>
+        <p>Som imersivo com design moderno e luzes RGB.</p>
         <button>Adicionar ao carrinho</button>
       </div>
     </div>
   </section>
 
-  <!-- Newsletter / Feedback -->
+  <!-- Newsletter / Contato -->
   <section class="newsletter">
     <h2>Fale com a gente</h2>
     <form action="mailto:paulosergioti511@gmail.com" method="POST" enctype="text/plain">
@@ -93,9 +92,9 @@
       <li><a href="#">Contato</a></li>
     </ul>
     <div class="redes-sociais">
-      <i class="fab fa-facebook"></i>
-      <i class="fab fa-instagram"></i>
-      <i class="fab fa-twitter"></i>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
     </div>
   </footer>
 
@@ -106,247 +105,6 @@
       document.body.classList.toggle("menu-aberto");
     }
 
-    // Fechar menu ao clicar fora
-    document.addEventListener("click", function (e) {
-      const btn = document.querySelector(".menu-toggle");
-      const menu = document.getElementById("menu-lateral");
-      const clickInside = menu.contains(e.target) || btn.contains(e.target);
-      if (!clickInside && document.body.classList.contains("menu-aberto")) {
-        toggleMenu();
-      }
-    });
-  </script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TechNow Brasil</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-</head>
-<body>
-  <!-- Cabeçalho -->
-  <header>
-    <div class="logo">TechNow Brasil</div>
-    <div class="topo-direito">
-      <a
-        href="https://wa.me/5511994545207?text=Olá,%20tudo%20bem?%20Vim%20pelo%20site,%20poderia%20me%20ajudar?"
-        class="whatsapp-btn"
-        target="_blank"
-      >
-        <i class="fab fa-whatsapp"></i> (11) 99454-5207
-      </a>
-      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-    </div>
-  </header>
-
-  <!-- Menu lateral retrátil -->
-  <nav id="menu-lateral">
-    <h2>Promoções</h2>
-    <div class="promo">🔥 Smartphone X - R$1999</div>
-    <div class="promo">💻 Notebook Pro - R$3899</div>
-    <div class="promo">🎧 Fone Gamer RGB - R$249</div>
-  </nav>
-
-  <!-- Seção Hero -->
-  <section class="hero">
-    <h1>A nova era da tecnologia começa aqui!</h1>
-    <p>Conheça os melhores produtos e conte com nosso suporte especializado.</p>
-    <a href="#produtos" class="btn-hero">Ver Produtos</a>
-  </section>
-
-  <!-- Produtos -->
-  <section id="produtos" class="produtos">
-    <h2>Produtos em Destaque</h2>
-    <div class="grid-produtos">
-      <div class="produto">
-        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600" alt="Smartphone X" />
-        <h3>Smartphone X</h3>
-        <span class="preco">R$ 1.999,00</span>
-        <p>Desempenho de ponta e câmera incrível.</p>
-        <button>Adicionar ao carrinho</button>
-      </div>
-      <div class="produto">
-        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=600" alt="Notebook Pro" />
-        <h3>Notebook Pro</h3>
-        <span class="preco">R$ 3.899,00</span>
-        <p>Ideal para trabalho, estudos e jogos.</p>
-        <button>Adicionar ao carrinho</button>
-      </div>
-      <div class="produto">
-        <img src="https://images.unsplash.com/photo-1615391451684-56c8f9dd0b01?w=600" alt="Fone Gamer RGB" />
-        <h3>Fone Gamer RGB</h3>
-        <span class="preco">R$ 249,00</span>
-        <p>Áudio imersivo com luzes personalizadas.</p>
-        <button>Adicionar ao carrinho</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- Newsletter / Feedback -->
-  <section class="newsletter">
-    <h2>Fale com a gente</h2>
-    <form action="mailto:paulosergioti511@gmail.com" method="POST" enctype="text/plain">
-      <input type="text" name="nome" placeholder="Seu nome" required />
-      <input type="email" name="email" placeholder="Seu e-mail" required />
-      <textarea name="mensagem" rows="5" placeholder="Sua mensagem..." required></textarea>
-      <button type="submit">Enviar</button>
-    </form>
-  </section>
-
-  <!-- Chatbot simulado -->
-  <div class="chatbot">
-    <p class="chatbot-msg">Olá! Precisa de ajuda? Clique aqui para falar com a TechNow Brasil!</p>
-  </div>
-
-  <!-- Rodapé -->
-  <footer>
-    <div class="info">
-      <p>© 2025 TechNow Brasil. Todos os direitos reservados.</p>
-    </div>
-    <ul class="links">
-      <li><a href="#">Termos</a></li>
-      <li><a href="#">Política de Privacidade</a></li>
-      <li><a href="#">Contato</a></li>
-    </ul>
-    <div class="redes-sociais">
-      <i class="fab fa-facebook"></i>
-      <i class="fab fa-instagram"></i>
-      <i class="fab fa-twitter"></i>
-    </div>
-  </footer>
-
-  <!-- Scripts -->
-  <script>
-    function toggleMenu() {
-      document.getElementById("menu-lateral").classList.toggle("aberto");
-      document.body.classList.toggle("menu-aberto");
-    }
-
-    // Fechar menu ao clicar fora
-    document.addEventListener("click", function (e) {
-      const btn = document.querySelector(".menu-toggle");
-      const menu = document.getElementById("menu-lateral");
-      const clickInside = menu.contains(e.target) || btn.contains(e.target);
-      if (!clickInside && document.body.classList.contains("menu-aberto")) {
-        toggleMenu();
-      }
-    });
-  </script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TechNow Brasil</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-</head>
-<body>
-  <!-- Cabeçalho -->
-  <header>
-    <div class="logo">TechNow Brasil</div>
-    <div class="topo-direito">
-      <a
-        href="https://wa.me/5511994545207?text=Olá,%20tudo%20bem?%20Vim%20pelo%20site,%20poderia%20me%20ajudar?"
-        class="whatsapp-btn"
-        target="_blank"
-      >
-        <i class="fab fa-whatsapp"></i> (11) 99454-5207
-      </a>
-      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-    </div>
-  </header>
-
-  <!-- Menu lateral retrátil -->
-  <nav id="menu-lateral">
-    <h2>Promoções</h2>
-    <div class="promo">🔥 Smartphone X - R$1999</div>
-    <div class="promo">💻 Notebook Pro - R$3899</div>
-    <div class="promo">🎧 Fone Gamer RGB - R$249</div>
-  </nav>
-
-  <!-- Seção Hero -->
-  <section class="hero">
-    <h1>A nova era da tecnologia começa aqui!</h1>
-    <p>Conheça os melhores produtos e conte com nosso suporte especializado.</p>
-    <a href="#produtos" class="btn-hero">Ver Produtos</a>
-  </section>
-
-  <!-- Produtos -->
-  <section id="produtos" class="produtos">
-    <h2>Produtos em Destaque</h2>
-    <div class="grid-produtos">
-      <div class="produto">
-        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600" alt="Smartphone X" />
-        <h3>Smartphone X</h3>
-        <span class="preco">R$ 1.999,00</span>
-        <p>Desempenho de ponta e câmera incrível.</p>
-        <button>Adicionar ao carrinho</button>
-      </div>
-      <div class="produto">
-        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=600" alt="Notebook Pro" />
-        <h3>Notebook Pro</h3>
-        <span class="preco">R$ 3.899,00</span>
-        <p>Ideal para trabalho, estudos e jogos.</p>
-        <button>Adicionar ao carrinho</button>
-      </div>
-      <div class="produto">
-        <img src="https://images.unsplash.com/photo-1615391451684-56c8f9dd0b01?w=600" alt="Fone Gamer RGB" />
-        <h3>Fone Gamer RGB</h3>
-        <span class="preco">R$ 249,00</span>
-        <p>Áudio imersivo com luzes personalizadas.</p>
-        <button>Adicionar ao carrinho</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- Newsletter / Feedback -->
-  <section class="newsletter">
-    <h2>Fale com a gente</h2>
-    <form action="mailto:paulosergioti511@gmail.com" method="POST" enctype="text/plain">
-      <input type="text" name="nome" placeholder="Seu nome" required />
-      <input type="email" name="email" placeholder="Seu e-mail" required />
-      <textarea name="mensagem" rows="5" placeholder="Sua mensagem..." required></textarea>
-      <button type="submit">Enviar</button>
-    </form>
-  </section>
-
-  <!-- Chatbot simulado -->
-  <div class="chatbot">
-    <p class="chatbot-msg">Olá! Precisa de ajuda? Clique aqui para falar com a TechNow Brasil!</p>
-  </div>
-
-  <!-- Rodapé -->
-  <footer>
-    <div class="info">
-      <p>© 2025 TechNow Brasil. Todos os direitos reservados.</p>
-    </div>
-    <ul class="links">
-      <li><a href="#">Termos</a></li>
-      <li><a href="#">Política de Privacidade</a></li>
-      <li><a href="#">Contato</a></li>
-    </ul>
-    <div class="redes-sociais">
-      <i class="fab fa-facebook"></i>
-      <i class="fab fa-instagram"></i>
-      <i class="fab fa-twitter"></i>
-    </div>
-  </footer>
-
-  <!-- Scripts -->
-  <script>
-    function toggleMenu() {
-      document.getElementById("menu-lateral").classList.toggle("aberto");
-      document.body.classList.toggle("menu-aberto");
-    }
-
-    // Fechar menu ao clicar fora
     document.addEventListener("click", function (e) {
       const btn = document.querySelector(".menu-toggle");
       const menu = document.getElementById("menu-lateral");
